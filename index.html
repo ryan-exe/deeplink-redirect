@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    const link = new URLSearchParams(window.location.search).get('link');
+    if (link) {
+      window.location.replace(link);
+    }
+  </script>
+</head>
+<body>
+  <p id="msg">Redirecting...</p>
+  <script>
+    if (!link) {
+      document.getElementById('msg').textContent = 'No link provided. Use ?link=your-deep-link';
+    }
+  </script>
+</body>
+</html>
